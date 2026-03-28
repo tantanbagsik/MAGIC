@@ -1,9 +1,10 @@
 import os
+import json
 
 MONGODB_URL = os.environ.get('MONGODB_URL')
 DATABASE_NAME = os.environ.get('DATABASE_NAME', 'voice_ai_support')
 
-class FileDatabase:
+class InMemoryDatabase:
     def __init__(self):
         self.conversations = {}
     
@@ -31,21 +32,9 @@ class FileDatabase:
                     conv[key].append(value)
             return type('obj', (), {'modified_count': 1})()
         return type('obj', (), {'modified_count': 0})()
-
-def init_db():
-    if MONGODB_URL:
-        try:
-            from pymongo import MongoClient
-            client = MongoClient(MONGODB_URL, serverSelectionTimeoutMS=5000)
-            client.admin.command('ping')
-            mongo_db = client[DATABASE_NAME]
-            print(f"Connected to MongoDB Atlas: {DATABASE_NAME}")
-            return MongoDatabase(mongo_db)
-        except Exception as e:
-            print(f"MongoDB connection failed: {e}")
-            print("Using File Database fallback")
     
-    return FileDatabase()
+    def ping(self):
+        return True
 
 class MongoDatabase:
     def __init__(self, db):
@@ -61,3 +50,25 @@ class MongoDatabase:
     def update_one(self, query, update):
         result = self.conversations.update_one(query, update)
         return type('obj', (), {'modified_count': result.modified_count})()
+    
+    def ping(self):
+        try:
+            self.conversations.find_one({}, {"_id": 1})
+            return True
+        except Exception:
+            return False
+
+def init_db():
+    if MONGODB_URL:
+        try:
+            from pymongo import MongoClient
+            client = MongoClient(MONGODB_URL, serverSelectionTimeoutMS=5000)
+            client.admin.command('ping')
+            mongo_db = client[DATABASE_NAME]
+            print(f"Connected to MongoDB Atlas: {DATABASE_NAME}")
+            return MongoDatabase(mongo_db)
+        except Exception as e:
+            print(f"MongoDB connection failed: {e}")
+            print("Using In-Memory Database fallback")
+    
+    return InMemoryDatabase()
