@@ -1,5 +1,5 @@
-# Vercel Python Requirements
 flask>=3.0.0
+gunicorn>=21.0.0
 pymongo>=4.6.0
 redis>=5.0.0
 httpx>=0.27.0
