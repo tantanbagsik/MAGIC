@@ -41,7 +41,14 @@ def get_llm_response(message, conversation_history=None):
     return "LLM not configured. Set GROQ_API_KEY in Vercel environment variables."
 
 db = {}
-cache = {}
+
+try:
+    from cache_helper import get_cache
+    cache = get_cache()
+    cache_status = "connected" if cache.ping() else "in-memory"
+except Exception:
+    cache = {}
+    cache_status = "in-memory"
 
 @app.route('/')
 def root():
@@ -56,8 +63,8 @@ def health():
     return jsonify({
         "status": "healthy",
         "database": "in-memory",
-        "cache": "in-memory",
-        "llm": "configured",
+        "cache": cache_status,
+        "llm": "groq" if GROQ_API_KEY else "not-configured",
         "timestamp": datetime.utcnow().isoformat()
     })
 
@@ -78,6 +85,9 @@ def create_conversation():
 
 @app.route('/conversations/<conversation_id>')
 def get_conversation(conversation_id):
+    cached = cache.get(f"conversation:{conversation_id}") if isinstance(cache, dict) == False else None
+    if cached:
+        return jsonify(cached)
     conversation = db.get(conversation_id)
     if not conversation:
         return jsonify({"error": "Conversation not found"}), 404
@@ -113,7 +123,6 @@ def voice_message(conversation_id):
     user_message = "[Voice message - STT processing]"
     conversation_history = [{"role": msg["role"], "content": msg["content"]} for msg in conversation.get("messages", [])]
     try:
-        from _llm import get_llm_response
         ai_response = get_llm_response(user_message, conversation_history)
     except Exception as e:
         ai_response = f"LLM Error: {str(e)}"
