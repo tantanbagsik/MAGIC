@@ -2,8 +2,43 @@ from flask import Flask, request, jsonify
 import uuid
 from datetime import datetime
 import os
+import httpx
 
 app = Flask(__name__)
+
+LLM_PROVIDER = os.environ.get('LLM_PROVIDER', 'groq')
+GROQ_API_KEY = os.environ.get('GROQ_API_KEY', '')
+
+SUPPORT_SYSTEM_PROMPT = """You are a helpful customer support AI assistant. 
+You are friendly, professional, and helpful.
+Keep responses concise and clear."""
+
+def get_llm_response(message, conversation_history=None):
+    messages = [{"role": "system", "content": SUPPORT_SYSTEM_PROMPT}]
+    if conversation_history:
+        messages.extend(conversation_history)
+    messages.append({"role": "user", "content": message})
+    
+    if LLM_PROVIDER == 'groq' and GROQ_API_KEY:
+        try:
+            response = httpx.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={
+                    "Authorization": f"Bearer {GROQ_API_KEY}",
+                    "Content-Type": "application/json"
+                },
+                json={
+                    "model": "llama-3.1-8b-instant",
+                    "messages": messages,
+                    "temperature": 0.7,
+                    "max_tokens": 500
+                },
+                timeout=30.0
+            )
+            return response.json()["choices"][0]["message"]["content"]
+        except Exception as e:
+            return f"LLM Error: {str(e)}"
+    return "LLM not configured. Set GROQ_API_KEY in Vercel environment variables."
 
 db = {}
 cache = {}
@@ -57,7 +92,6 @@ def text_message(conversation_id):
         return jsonify({"error": "Conversation not found"}), 404
     conversation_history = [{"role": msg["role"], "content": msg["content"]} for msg in conversation.get("messages", [])]
     try:
-        from llm_helper import get_llm_response
         ai_response = get_llm_response(message, conversation_history)
     except Exception as e:
         ai_response = f"LLM Error: {str(e)}"
