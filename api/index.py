@@ -57,7 +57,7 @@ def text_message(conversation_id):
         return jsonify({"error": "Conversation not found"}), 404
     conversation_history = [{"role": msg["role"], "content": msg["content"]} for msg in conversation.get("messages", [])]
     try:
-        from _llm import get_llm_response
+        from llm_helper import get_llm_response
         ai_response = get_llm_response(message, conversation_history)
     except Exception as e:
         ai_response = f"LLM Error: {str(e)}"

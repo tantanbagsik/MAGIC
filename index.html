@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Support</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 { text-align: center; color: #333; margin-bottom: 20px; }
+        .chat-box { background: white; border-radius: 12px; padding: 20px; min-height: 400px; max-height: 500px; overflow-y: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .message { margin-bottom: 15px; padding: 12px 16px; border-radius: 12px; max-width: 85%; }
+        .user { background: #007AFF; color: white; margin-left: auto; }
+        .ai { background: #E9E9EB; color: #333; }
+        .controls { display: flex; gap: 10px; margin-top: 20px; justify-content: center; }
+        button { padding: 12px 24px; border: none; border-radius: 25px; font-size: 16px; cursor: pointer; transition: all 0.3s; }
+        .record-btn { background: #FF3B30; color: white; }
+        .record-btn.recording { animation: pulse 1s infinite; background: #FF6B6B; }
+        .text-btn { background: #34C759; color: white; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        .status { text-align: center; color: #666; margin-bottom: 15px; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Voice AI Support</h1>
+        <div class="status" id="status">Ready</div>
+        <div class="chat-box" id="chatBox"></div>
+        <div class="controls">
+            <button class="record-btn" id="recordBtn">🎤 Voice</button>
+            <button class="text-btn" id="textBtn">💬 Text</button>
+        </div>
+    </div>
+    <script>
+        let conversationId = null;
+        let isRecording = false;
+        let mediaRecorder;
+        let audioChunks = [];
+        
+        const chatBox = document.getElementById('chatBox');
+        const recordBtn = document.getElementById('recordBtn');
+        const status = document.getElementById('status');
+        
+        async function initConversation() {
+            const res = await fetch('/conversations', { method: 'POST' });
+            conversationId = (await res.json()).conversation_id;
+        }
+        
+        function addMessage(content, type) {
+            const div = document.createElement('div');
+            div.className = `message ${type}`;
+            div.textContent = content;
+            chatBox.appendChild(div);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+        
+        async function sendVoice(audioBlob) {
+            status.textContent = 'Processing...';
+            const formData = new FormData();
+            formData.append('audio', audioBlob, 'audio.webm');
+            
+            const res = await fetch(`/conversations/${conversationId}/voice-message`, {
+                method: 'POST',
+                body: formData
+            });
+            const data = await res.json();
+            addMessage(data.user_message, 'user');
+            addMessage(data.ai_response, 'ai');
+            status.textContent = 'Ready';
+        }
+        
+        recordBtn.addEventListener('click', async () => {
+            if (!conversationId) await initConversation();
+            
+            if (!isRecording) {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                
+                mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+                mediaRecorder.onstop = () => {
+                    const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
+                    sendVoice(audioBlob);
+                    stream.getTracks().forEach(t => t.stop());
+                };
+                
+                mediaRecorder.start();
+                isRecording = true;
+                recordBtn.classList.add('recording');
+                recordBtn.textContent = '⏹ Stop';
+                status.textContent = 'Recording...';
+            } else {
+                mediaRecorder.stop();
+                isRecording = false;
+                recordBtn.classList.remove('recording');
+                recordBtn.textContent = '🎤 Voice';
+            }
+        });
+        
+        document.getElementById('textBtn').addEventListener('click', async () => {
+            if (!conversationId) await initConversation();
+            const msg = prompt('Enter your message:');
+            if (!msg) return;
+            
+            status.textContent = 'Processing...';
+            const res = await fetch(`/conversations/${conversationId}/text-message`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: msg })
+            });
+            const data = await res.json();
+            addMessage(data.user_message, 'user');
+            addMessage(data.ai_response, 'ai');
+            status.textContent = 'Ready';
+        });
+        
+        initConversation();
+    </script>
+</body>
+</html>

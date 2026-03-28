@@ -1,0 +1,493 @@
+{
+  "6208f657-41de-4792-a48a-608c1b68f7c7": {
+    "conversation_id": "6208f657-41de-4792-a48a-608c1b68f7c7",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T04:56:52.704423",
+    "updated_at": "2026-03-28T04:56:52.704439"
+  },
+  "5afccac4-0528-4260-ae32-b13fbafe90fb": {
+    "conversation_id": "5afccac4-0528-4260-ae32-b13fbafe90fb",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T04:57:10.780355",
+    "updated_at": "2026-03-28T04:57:10.780367"
+  },
+  "c78467cc-38df-48b5-a7f3-bd51e07a3735": {
+    "conversation_id": "c78467cc-38df-48b5-a7f3-bd51e07a3735",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T04:58:32.559056",
+    "updated_at": "2026-03-28T04:58:32.559067"
+  },
+  "32f24464-db19-4c81-9607-24faa75faaa6": {
+    "conversation_id": "32f24464-db19-4c81-9607-24faa75faaa6",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T04:59:41.519932",
+    "updated_at": "2026-03-28T04:59:41.519944"
+  },
+  "e6b7d1a3-1aed-4dfc-a9ab-d8e2222d284c": {
+    "conversation_id": "e6b7d1a3-1aed-4dfc-a9ab-d8e2222d284c",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!",
+        "created_at": "2026-03-28T05:00:52.653430"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm currently unavailable. Please ensure Ollama is running with: ollama serve && ollama pull llama3.2",
+        "created_at": "2026-03-28T05:00:52.653430"
+      }
+    ],
+    "created_at": "2026-03-28T05:00:47.940224",
+    "updated_at": "2026-03-28T05:00:52.653430"
+  },
+  "f3ca746b-8d57-47d3-ae6a-8ca497f4e8bb": {
+    "conversation_id": "f3ca746b-8d57-47d3-ae6a-8ca497f4e8bb",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!",
+        "created_at": "2026-03-28T05:08:56.822272"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm currently unavailable. Please ensure Ollama is running with: ollama serve && ollama pull llama3.2",
+        "created_at": "2026-03-28T05:08:56.822272"
+      }
+    ],
+    "created_at": "2026-03-28T05:08:51.646576",
+    "updated_at": "2026-03-28T05:08:56.822272"
+  },
+  "e7190f32-ce04-40ca-af4f-a4a56b13c4ca": {
+    "conversation_id": "e7190f32-ce04-40ca-af4f-a4a56b13c4ca",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello!",
+        "created_at": "2026-03-28T06:43:52.739551"
+      },
+      {
+        "role": "assistant",
+        "content": "I encountered an error processing your request. Please check that Ollama is running properly. Error: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+        "created_at": "2026-03-28T06:43:52.739551"
+      }
+    ],
+    "created_at": "2026-03-28T06:43:46.107199",
+    "updated_at": "2026-03-28T06:43:52.739551"
+  },
+  "d8b31946-7ccb-426d-86ae-2e55773c75a0": {
+    "conversation_id": "d8b31946-7ccb-426d-86ae-2e55773c75a0",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T06:56:30.150390",
+    "updated_at": "2026-03-28T06:56:30.150402"
+  },
+  "8aed345c-199c-457e-913d-393a55b8e2ef": {
+    "conversation_id": "8aed345c-199c-457e-913d-393a55b8e2ef",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T06:56:30.153970",
+    "updated_at": "2026-03-28T06:56:30.153977"
+  },
+  "3e7c29b3-c9e0-4670-af20-7efba109e778": {
+    "conversation_id": "3e7c29b3-c9e0-4670-af20-7efba109e778",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T06:56:35.352893",
+    "updated_at": "2026-03-28T06:56:35.352907"
+  },
+  "faccc58f-5bfe-4ad9-8a69-f9604eac9295": {
+    "conversation_id": "faccc58f-5bfe-4ad9-8a69-f9604eac9295",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "hi",
+        "created_at": "2026-03-28T06:56:49.768676"
+      },
+      {
+        "role": "assistant",
+        "content": "I encountered an error processing your request. Please check that Ollama is running properly. Error: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+        "created_at": "2026-03-28T06:56:49.768676"
+      }
+    ],
+    "created_at": "2026-03-28T06:56:37.971210",
+    "updated_at": "2026-03-28T06:56:49.768676"
+  },
+  "bf6966fa-97b9-4cea-865a-875bd473b3f2": {
+    "conversation_id": "bf6966fa-97b9-4cea-865a-875bd473b3f2",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[Voice transcription - Install faster-whisper to enable]",
+        "audio_path": "C:\\lln ai\\voice-ai-support\\audio_files\\3f940aae-cf4d-4508-a4bb-677e12ee45d0.webm",
+        "created_at": "2026-03-28T06:57:19.057779"
+      },
+      {
+        "role": "assistant",
+        "content": "I encountered an error processing your request. Please check that Ollama is running properly. Error: Client error '404 Not Found' for url 'http://localhost:11434/api/chat'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+        "created_at": "2026-03-28T06:57:19.057779"
+      }
+    ],
+    "created_at": "2026-03-28T06:57:03.539633",
+    "updated_at": "2026-03-28T06:57:19.057779"
+  },
+  "1d8db9c6-49ad-438e-bf97-bafdf85e7b79": {
+    "conversation_id": "1d8db9c6-49ad-438e-bf97-bafdf85e7b79",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello, how are you?",
+        "created_at": "2026-03-28T07:17:09.485805"
+      },
+      {
+        "role": "assistant",
+        "content": "I'm doing well, thank you for asking! How can I assist you today? Do you have a question or issue related to our product or service that I can help with?",
+        "created_at": "2026-03-28T07:17:09.485805"
+      }
+    ],
+    "created_at": "2026-03-28T07:16:51.725827",
+    "updated_at": "2026-03-28T07:17:09.485805"
+  },
+  "7369aa64-b4ce-4627-ac87-75f85bc34313": {
+    "conversation_id": "7369aa64-b4ce-4627-ac87-75f85bc34313",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:17:33.410003",
+    "updated_at": "2026-03-28T07:17:33.410016"
+  },
+  "400b3203-6d8c-494e-9ba3-8a59b4639646": {
+    "conversation_id": "400b3203-6d8c-494e-9ba3-8a59b4639646",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[Voice transcription - Install faster-whisper to enable]",
+        "audio_path": "C:\\lln ai\\voice-ai-support\\audio_files\\31cc3328-df7c-4fd7-a635-957e52c4393d.webm",
+        "created_at": "2026-03-28T07:17:56.305130"
+      },
+      {
+        "role": "assistant",
+        "content": "Thank you for the voice transcription setting. I'm now ready to assist you. How can I help you today? Do you have any questions or concerns about our products or services?",
+        "created_at": "2026-03-28T07:17:56.305130"
+      },
+      {
+        "role": "user",
+        "content": "[Voice transcription - Install faster-whisper to enable]",
+        "audio_path": "C:\\lln ai\\voice-ai-support\\audio_files\\3b36d743-bc66-46bf-8746-08156e9429c6.webm",
+        "created_at": "2026-03-28T07:18:20.818033"
+      },
+      {
+        "role": "assistant",
+        "content": "Your installation is complete. What's on your mind? Need assistance with a specific issue or just want some general information? I'm here to help!",
+        "created_at": "2026-03-28T07:18:20.818033"
+      },
+      {
+        "role": "user",
+        "content": "create a program that runs these script live when call",
+        "created_at": "2026-03-28T07:19:33.104601"
+      },
+      {
+        "role": "assistant",
+        "content": "That sounds like an interesting project!\n\nTo clarify, you'd like me to create a program that runs the scripts we've discussed (if any) in real-time when someone makes a call. Can you please provide more context or details about what you mean by \"these scripts\"?\n\nAlso, are you looking for a solution using a specific programming language or platform? Let me know and I'll do my best to assist you.\n\n(If I'm unsure about the specifics, I can always offer to escalate this request to a human agent who may be better equipped to help.)",
+        "created_at": "2026-03-28T07:19:33.104601"
+      },
+      {
+        "role": "user",
+        "content": "phyton ai automation",
+        "created_at": "2026-03-28T07:21:10.151877"
+      },
+      {
+        "role": "assistant",
+        "content": "You're looking for a Python-based AI automation solution that runs scripts in real-time when someone makes a call.\n\nTo get started, I'd need more information about the specific requirements and goals of your project. Here are some questions to consider:\n\n1. What kind of calls are you trying to automate (e.g., customer service, sales, voice messages)?\n2. What kind of actions do you want the scripts to perform when a call is received?\n3. Do you have any existing infrastructure in place (e.g., phone system, AI platform)?\n\nAssuming this is a basic automation project, I can provide some general guidance on how to approach it.\n\nHere's an example of a simple Python script using the `pyttsx3` library for text-to-speech and ` SpeechRecognition` library for speech recognition:\n```python\nimport pyttsx3\nimport SpeechRecognition as sr\n\n# Initialize speech recognition engine\nr = sr.Recognizer()\n\n# Define a function to process incoming call\ndef process_call():\n    # Use microphone as audio source\n    with sr.Microphone() as source:\n        audio = r.listen(source)\n        \n        # Transcribe the speech\n        try:\n            text = r.recognize_google(audio, language='en-US')\n            print(text)  # Print the transcribed text\n            \n            # Perform actions based on the transcribed text (e.g., play a message)\n            engine = pyttsx3.init()\n            engine.say('Hello! This is an automated response.')\n            engine.runAndWait()\n        except Exception as e:\n            print(f\"Error: {str(e)}\")\n\n# Run the script in real-time\nimport threading\ndef run_script():\n    while True:\n        process_call()\n\n# Start the thread\nthread = threading.Thread(target=run_script)\nthread.start()\n```\nThis is just a basic example, and you'll likely need to modify it to suit your specific requirements.\n\nIf this doesn't quite meet your needs, I'd be happy to help further or escalate to a human agent for more guidance.",
+        "created_at": "2026-03-28T07:21:10.151877"
+      },
+      {
+        "role": "user",
+        "content": "choose what is the best option my goal is to put ai voice chat bot ",
+        "created_at": "2026-03-28T07:24:31.513753"
+      },
+      {
+        "role": "assistant",
+        "content": "Based on your goal of creating an AI-powered voice chatbot, I would recommend using a combination of natural language processing (NLP) and machine learning (ML) techniques.\n\nHere's a suggested approach:\n\n**Option 1: Python-based Solution with TensorFlow and Kaldi**\n\n* Use the `SpeechRecognition` library to transcribe incoming speech into text\n* Utilize the `TensorFlow` framework for building and training an NLP model to analyze and understand user input\n* Leverage the `Kaldi` toolkit for speech recognition and audio processing\n\n**Option 2: Python-based Solution with PyTorch and Google Cloud AI**\n\n* Use the `SpeechRecognition` library to transcribe incoming speech into text\n* Utilize the `PyTorch` framework for building and training an NLP model to analyze and understand user input\n* Leverage the Google Cloud AI Platform for pre-trained models, automatic deployment, and seamless integration with other services\n\n**Option 3: Node.js-based Solution with Dialogflow and Google Cloud Speech-to-Text**\n\n* Use the `dialogflow` library to build a conversational interface and integrate with your chatbot\n* Utilize the `Google Cloud Speech-to-Text` API for speech recognition and transcribing incoming speech into text\n\nConsidering these options, I would recommend **Option 1: Python-based Solution with TensorFlow and Kaldi**. This combination provides:\n\n* Robust NLP capabilities through TensorFlow\n* Advanced speech recognition and audio processing through Kaldi\n* A flexible and open-source solution that allows for customization and integration with other tools\n\nHere's a rough outline of how this option could work:\n\n1. Set up a Python environment with TensorFlow, Kaldi, and necessary dependencies\n2. Create a chatbot framework using the `SpeechRecognition` library to transcribe incoming speech into text\n3. Train an NLP model using TensorFlow to analyze and understand user input\n4. Leverage Kaldi for speech recognition and audio processing\n5. Integrate with a database or messaging platform to store and retrieve chatbot responses\n\nThis option requires more development effort upfront, but provides a highly customizable and extensible solution.\n\nHow does this sound? Would you like me to elaborate on any of these options or provide more guidance on getting started?",
+        "created_at": "2026-03-28T07:24:31.513753"
+      },
+      {
+        "role": "user",
+        "content": "yes create it",
+        "created_at": "2026-03-28T07:27:01.294994"
+      },
+      {
+        "role": "assistant",
+        "content": "I encountered an error processing your request. Please check that Ollama is running properly. Error: timed out",
+        "created_at": "2026-03-28T07:27:01.294994"
+      },
+      {
+        "role": "user",
+        "content": "can you help me create a project plan on building this app",
+        "created_at": "2026-03-28T07:32:05.605948"
+      },
+      {
+        "role": "assistant",
+        "content": "Here's a rough outline of a project plan for building an AI-powered voice chatbot using Python, TensorFlow, and Kaldi:\n\n**Project Name:** Voice Chatbot with AI-Powered Conversations\n\n**Project Overview:**\n\nCreate a conversational interface that uses natural language processing (NLP) and machine learning (ML) to understand and respond to user input. The app will be built using Python, TensorFlow, and Kaldi.\n\n**Project Timeline:**\n\nAssuming a moderate development pace, here's a rough outline of the project timeline:\n\n1. **Research and Planning (Weeks 1-2)**\n\t* Research NLP and ML techniques for conversational AI\n\t* Gather requirements and define project scope\n\t* Create a detailed project plan and timeline\n2. **Setup and Infrastructure (Weeks 3-4)**\n\t* Set up Python environment with required dependencies (TensorFlow, Kaldi, etc.)\n\t* Install necessary libraries and tools (SpeechRecognition, etc.)\n\t* Configure infrastructure for data storage and retrieval\n3. **Chatbot Framework Development (Weeks 5-8)**\n\t* Develop the chatbot framework using SpeechRecognition and other libraries\n\t* Integrate with TensorFlow for NLP and ML capabilities\n4. **NLP Model Training (Weeks 9-12)**\n\t* Train NLP models using TensorFlow and Kaldi\n\t* Fine-tune models for conversational AI\n5. **Kaldi Integration and Testing (Weeks 13-14)**\n\t* Integrate Kaldi with the chatbot framework\n\t* Test and refine chatbot responses to user input\n6. **UI/UX Design and Development (Weeks 15-16)**\n\t* Create a user-friendly interface for the chatbot\n\t* Develop a conversational UI using web or mobile technologies\n7. **Testing and Debugging (Weeks 17-18)**\n\t* Test the chatbot with various user inputs and scenarios\n\t* Identify and fix bugs, errors, and areas for improvement\n8. **Launch and Deployment (Week 19)**\n\t* Launch the chatbot app on a platform of choice (web, mobile, etc.)\n\t* Deploy the app to production environment\n\n**Project Milestones:**\n\n1. Complete research and planning phase (Week 2)\n2. Set up infrastructure and dependencies (Week 4)\n3. Develop chatbot framework (Week 8)\n4. Train NLP models (Week 12)\n5. Integrate Kaldi and test chatbot (Week 14)\n6. Design and develop UI/UX (Week 16)\n7. Test and debug app (Week 18)\n8. Launch and deploy app (Week 19)\n\n**Project Resources:**\n\n1. Python environment with TensorFlow, Kaldi, and necessary dependencies\n2. SpeechRecognition library for speech-to-text functionality\n3. Google Cloud AI Platform or other cloud services for model training and deployment\n4. Web or mobile development tools for creating conversational UI\n5. Database or messaging platform for storing and retrieving chatbot responses\n\n**Project Risks:**\n\n1. Complexity of NLP and ML techniques\n2. Limited availability of data for training models\n3. Integration issues between TensorFlow, Kaldi, and other libraries\n4. Challenges with designing a user-friendly conversational UI\n\nHow does this project plan look? Are there any areas you'd like me to elaborate on or change?",
+        "created_at": "2026-03-28T07:32:05.605948"
+      }
+    ],
+    "created_at": "2026-03-28T07:17:35.962715",
+    "updated_at": "2026-03-28T07:32:05.605948"
+  },
+  "7e344c35-688a-4699-ae5d-ee35466a2062": {
+    "conversation_id": "7e344c35-688a-4699-ae5d-ee35466a2062",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:32:08.007614",
+    "updated_at": "2026-03-28T07:32:08.007629"
+  },
+  "e3a966dd-f3e5-468c-8f76-bab58356cf1f": {
+    "conversation_id": "e3a966dd-f3e5-468c-8f76-bab58356cf1f",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:32:08.010381",
+    "updated_at": "2026-03-28T07:32:08.010387"
+  },
+  "533b7b29-8f34-48c1-9a47-ef70c3412881": {
+    "conversation_id": "533b7b29-8f34-48c1-9a47-ef70c3412881",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:32:12.645561",
+    "updated_at": "2026-03-28T07:32:12.645569"
+  },
+  "18e14328-397b-4a69-bea0-0bd89a96090e": {
+    "conversation_id": "18e14328-397b-4a69-bea0-0bd89a96090e",
+    "customer_id": null,
+    "status": "active",
+    "messages": [
+      {
+        "role": "user",
+        "content": "[Voice transcription - Install faster-whisper to enable]",
+        "audio_path": "C:\\lln ai\\voice-ai-support\\audio_files\\db59d9f3-a235-42ca-8879-b7832aca755a.webm",
+        "created_at": "2026-03-28T07:33:06.025669"
+      },
+      {
+        "role": "assistant",
+        "content": "Thank you for using our customer support system! I'm here to help you with any questions or concerns you may have. Since you've mentioned installing the Faster-Whisper feature, can you please tell me a bit more about what issue you're experiencing? Are you having trouble installing it, or are there any other issues you'd like assistance with?",
+        "created_at": "2026-03-28T07:33:06.025669"
+      },
+      {
+        "role": "user",
+        "content": "[Voice transcription - Install faster-whisper to enable]",
+        "audio_path": "C:\\lln ai\\voice-ai-support\\audio_files\\ec1a687d-7f07-4300-aca5-6027f410e0cb.webm",
+        "created_at": "2026-03-28T07:34:08.738905"
+      },
+      {
+        "role": "assistant",
+        "content": "It seems like the installation process for Faster-Whisper may be taking some time. Can you please tell me what device you're using (e.g., computer, phone, tablet) and what operating system it is running? This will help me narrow down any potential issues and provide more accurate assistance.\n\nIf I don't have enough information to assist you further, I can also offer to escalate your issue to a human agent for additional support. Would you like me to do that?",
+        "created_at": "2026-03-28T07:34:08.738905"
+      }
+    ],
+    "created_at": "2026-03-28T07:32:14.922542",
+    "updated_at": "2026-03-28T07:34:08.738905"
+  },
+  "6da9c396-4fa0-484d-8116-4bad5e24ceff": {
+    "conversation_id": "6da9c396-4fa0-484d-8116-4bad5e24ceff",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:32:14.926706",
+    "updated_at": "2026-03-28T07:32:14.926715"
+  },
+  "ceb5d112-2583-476d-b224-1e6c36a44c3c": {
+    "conversation_id": "ceb5d112-2583-476d-b224-1e6c36a44c3c",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:32:17.244819",
+    "updated_at": "2026-03-28T07:32:17.244830"
+  },
+  "4f910dfa-fada-4f47-b6e9-929867cae513": {
+    "conversation_id": "4f910dfa-fada-4f47-b6e9-929867cae513",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:04.886420",
+    "updated_at": "2026-03-28T07:44:04.886483"
+  },
+  "480cbaba-9123-4187-b01a-dace63a173d8": {
+    "conversation_id": "480cbaba-9123-4187-b01a-dace63a173d8",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:07.483242",
+    "updated_at": "2026-03-28T07:44:07.483249"
+  },
+  "68e9dde9-d229-47e8-b5ff-1b8f7b8bb96b": {
+    "conversation_id": "68e9dde9-d229-47e8-b5ff-1b8f7b8bb96b",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:10.101441",
+    "updated_at": "2026-03-28T07:44:10.101468"
+  },
+  "c38e28e2-932b-40e1-a462-ef7494c6f663": {
+    "conversation_id": "c38e28e2-932b-40e1-a462-ef7494c6f663",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:10.112996",
+    "updated_at": "2026-03-28T07:44:10.113011"
+  },
+  "5d23bb9e-b912-4fd5-9dde-46d4465bb54b": {
+    "conversation_id": "5d23bb9e-b912-4fd5-9dde-46d4465bb54b",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:10.121592",
+    "updated_at": "2026-03-28T07:44:10.121611"
+  },
+  "17f94f9a-b8ae-46e4-ba77-c9aae4e2b34b": {
+    "conversation_id": "17f94f9a-b8ae-46e4-ba77-c9aae4e2b34b",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:12.735677",
+    "updated_at": "2026-03-28T07:44:12.735695"
+  },
+  "8c523e60-c3a0-4799-91d0-e2ad20e34177": {
+    "conversation_id": "8c523e60-c3a0-4799-91d0-e2ad20e34177",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:12.744903",
+    "updated_at": "2026-03-28T07:44:12.744910"
+  },
+  "e62ff2d7-39ec-4010-a405-ba3780edcf4b": {
+    "conversation_id": "e62ff2d7-39ec-4010-a405-ba3780edcf4b",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:12.749178",
+    "updated_at": "2026-03-28T07:44:12.749191"
+  },
+  "8b8c12fa-9315-4c9b-9f05-0c3cb8f8b578": {
+    "conversation_id": "8b8c12fa-9315-4c9b-9f05-0c3cb8f8b578",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:15.338555",
+    "updated_at": "2026-03-28T07:44:15.338580"
+  },
+  "ac03eaee-7d98-4a0b-95a6-2884e211539c": {
+    "conversation_id": "ac03eaee-7d98-4a0b-95a6-2884e211539c",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:15.345825",
+    "updated_at": "2026-03-28T07:44:15.345833"
+  },
+  "4b8a52df-dd1d-4f8b-9e97-7bce8b51dda6": {
+    "conversation_id": "4b8a52df-dd1d-4f8b-9e97-7bce8b51dda6",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:17.919771",
+    "updated_at": "2026-03-28T07:44:17.919785"
+  },
+  "b765cc23-a7c5-4515-8a1b-ed9be4d15cca": {
+    "conversation_id": "b765cc23-a7c5-4515-8a1b-ed9be4d15cca",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:17.924270",
+    "updated_at": "2026-03-28T07:44:17.924279"
+  },
+  "dfaecf21-2191-4868-bf6b-08922d99db79": {
+    "conversation_id": "dfaecf21-2191-4868-bf6b-08922d99db79",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:20.404364",
+    "updated_at": "2026-03-28T07:44:20.404377"
+  },
+  "f7cbe14e-1726-4b01-b620-2c82c8be5a6b": {
+    "conversation_id": "f7cbe14e-1726-4b01-b620-2c82c8be5a6b",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:42.558768",
+    "updated_at": "2026-03-28T07:44:42.558788"
+  },
+  "b81a1f6d-6750-48cd-ad8d-88058977a51d": {
+    "conversation_id": "b81a1f6d-6750-48cd-ad8d-88058977a51d",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:45.155269",
+    "updated_at": "2026-03-28T07:44:45.155279"
+  },
+  "d0fe3ce2-6294-42fa-8d19-d3685cd1ad58": {
+    "conversation_id": "d0fe3ce2-6294-42fa-8d19-d3685cd1ad58",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:45.159476",
+    "updated_at": "2026-03-28T07:44:45.159486"
+  },
+  "f6ac562c-1889-4ec4-995d-7b76a2ff8a9e": {
+    "conversation_id": "f6ac562c-1889-4ec4-995d-7b76a2ff8a9e",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:47.746312",
+    "updated_at": "2026-03-28T07:44:47.746322"
+  },
+  "1dfe3d50-1664-4a02-8861-6a15ea5a92e7": {
+    "conversation_id": "1dfe3d50-1664-4a02-8861-6a15ea5a92e7",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:47.754636",
+    "updated_at": "2026-03-28T07:44:47.754647"
+  },
+  "ef9a3ca1-bcc0-4dbf-9943-07e5ae5e63f6": {
+    "conversation_id": "ef9a3ca1-bcc0-4dbf-9943-07e5ae5e63f6",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:47.760932",
+    "updated_at": "2026-03-28T07:44:47.760948"
+  },
+  "b658d8bf-3472-4bce-b751-692b31f98ac7": {
+    "conversation_id": "b658d8bf-3472-4bce-b751-692b31f98ac7",
+    "customer_id": null,
+    "status": "active",
+    "messages": [],
+    "created_at": "2026-03-28T07:44:50.307130",
+    "updated_at": "2026-03-28T07:44:50.307166"
+  }
+}
