@@ -20,9 +20,6 @@ SUPPORT_SYSTEM_PROMPT = """You are a helpful customer support AI assistant.
 You are friendly, professional, and helpful.
 Keep responses concise and clear."""
 
-db = {}
-cache = {}
-
 def init_database():
     if MONGODB_URL:
         try:
@@ -49,18 +46,20 @@ def init_cache():
     return InMemoryCache()
 
 class InMemoryDB:
+    def __init__(self):
+        self.data = {}
     def insert_one(self, document):
         conv_id = document.get("conversation_id")
-        db[conv_id] = document
+        self.data[conv_id] = document
     def find_one(self, query):
-        for conv in db.values():
+        for conv in self.data.values():
             if all(conv.get(k) == v for k, v in query.items()):
                 return conv.copy()
         return None
     def update_one(self, query, update):
         conv_id = query.get("conversation_id")
-        if conv_id and conv_id in db:
-            conv = db[conv_id]
+        if conv_id and conv_id in self.data:
+            conv = self.data[conv_id]
             if "$set" in update:
                 conv.update(update["$set"])
             if "$push" in update:
